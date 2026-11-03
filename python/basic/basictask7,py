@@ -1,0 +1,40 @@
+users = {}
+
+def signup():
+    id = input("enter id:")
+    email = input("enter email:")
+    password = input("enter password:")
+
+    users[id] = {
+        "email": email,
+        "password": password
+    }
+
+    print("signup successful")
+
+
+def login():
+    email = input("enter email:")
+    password = input("enter password:")
+
+    for id, user in users.items():
+        if user["email"] == email and user["password"] == password:
+            print("Login successful")
+            return
+
+    print("wrong email or password")
+
+
+while True:
+    print("signup:")
+    print("login:")
+    print("exit:")
+
+    choice = input("enter your choice: ")
+
+    if choice == "1":
+        signup()
+    elif choice == "2":
+        login()
+    elif choice == "3":
+        break

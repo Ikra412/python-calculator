@@ -1,0 +1,5 @@
+print("\n*******your detail********")
+name=input("plase enter your name==")
+address=input("plase enter your address==")
+print("name",name)
+print("address",address)
